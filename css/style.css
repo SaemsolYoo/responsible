@@ -9,10 +9,10 @@
 
 /* 레이아웃 */
 #header {background: #f4f4f4; /* url(../img/header_bg2.jpg) repeat-x center top; */}
-#nav {}
+#nav {background: #f4f4f4;}
 
 /* 컨테이너 (가운데영역) */
-.container {width: 1200px; margin: 0 auto; /* background: rgba(0,0,0,0.3)*/}
+.container {width: 1200px; margin: 0 auto; /* background: rgba(0,0,0,0.3) */}
 
 /* 헤더 */
 .header {height: 327px;}
@@ -96,6 +96,42 @@ transition: box-shadow 0.25s ease-in-out;}
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
 }
+
+/* 전체 메뉴 */
+.nav {overflow: hidden; padding: 25px 0;}
+.nav > div {float: left; width: 40%;}
+.nav > div:last-child {width: 20%;}
+.nav > div ol {overflow: hidden;}
+.nav > div ol li {float: left; width: 50%; font-family: 'Poppins', sans-serif; position: relative;
+padding-left: 8px; box-sizing: border-box;}
+.nav > div ol li:before {
+  content: '';
+  width: 3px; height: 3px;
+  background-color: #e96cfb;
+  border-radius: 50%;
+  position: absolute; left: 0; top: 6px;
+}
+.nav > div:last-child li {width: 100%;}
+.nav > div h3 {font-size: 15px; background: #f3fd53; font-weight: 600; margin-bottom: 4px;
+display: inline-block;}
+.nav > div ol li a {position: relative;}
+.nav > div ol li a:after {
+  content: '';
+  display: inline-block;
+  width: 0; height: 1px;
+  background: #e96cfb;
+  transition: all .2s ease-out;
+  position: absolute; bottom: 0; left: 0;
+}
+.nav > div ol li:hover a:after {
+  width: 100%;
+}
+
+
+
+
+
+
 
 /* mediaquery */
 @media (max-width:1220px) {
