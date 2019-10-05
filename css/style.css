@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'FuturaLT-Book'; src: url(../fonts/FuturaLT-Book.ttf)
+  format('truetype');
+  font-family: 'LucidaConsole'; src: url(../fonts/LucidaConsole.ttf)
+  format('truetype');
+}
+
+/* 레이아웃 */
+#header {background: #f4f4f4; /* url(../img/header_bg2.jpg) repeat-x center top; */}
+#nav {}
+
+/* 컨테이너 (가운데영역) */
+.container {width: 1200px; margin: 0 auto; /* background: rgba(0,0,0,0.3)*/}
+
+/* 헤더 */
+.header {height: 327px;}
+.header .header_menu {text-align: right;}
+.header .header_menu a {color: #0c0b0b; padding: 8px 0 6px 10px; display: inline-block;
+transition: color 0.3s ease; font-weight: bold; font-family: 'LucidaConsole';}
+.header .header_menu a:hover {color: #5df818; /*#dd6153;*/ }
+.header .header_tit {text-align: center; /* text-transform: uppercase;*/ margin-top: 55px;}
+.header .header_tit h1 {
+  font-size: 30px; color: #e96cfb;
+  background: #80fa6b;
+  display: inline-block;
+  padding: 0 30px 0 30px;
+  /* letter-spacing: 2px; */
+  font-weight: 700;
+  transition: box-shadow 0.25s ease-in-out;
+  font-family: 'FuturaLT-Book';
+}
+.header .header_tit h1:hover {
+  box-shadow:
+      inset -23px 0 0 0 #f4f4f4,
+      inset 110px 0 0 0 #f4f4f4;
+  color: #dd6153;
+}
+
+.header .header_tit a {  font-family: 'LucidaConsole'; font-size: 16px; color:#0c0b0b;
+background: #f3fd53; display: inline-block; padding: 3px 20px 3px 20px; font-weight: 300;
+transition: box-shadow 0.25s ease-in-out;}
+
+.header .header_tit a:hover {
+  box-shadow:
+    0 0 0 3px rgba(75,154,191,0.9) inset,
+    0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+
+.header .header_icon {text-align: center; margin-top: 40px; padding-bottom: 45px;}
+.header .header_icon li {display: inline; margin: 0 2px;}
+.header .header_icon li a {
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 50%;
+  width: 60px; height: 60px; color: #fff;
+  display: inline-block;
+  font-size: 35px;
+  line-height: 60px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.header .header_icon li a span {
+  position: absolute;
+  left: 50%;  top: -40px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  line-height: 1.9;
+  background: #f3fd53;
+  color: #0c0b0b;
+  padding: 3px 9px;
+  border-radius: 6px 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-family: 'LucidaConsole';
+}
+
+.header .header_icon li a:hover span {
+  opacity: 1;
+  top: -33px;
+}
+
+.header .header_icon li a:hover {
+  box-shadow: 0 0 0 3px #80fa6b inset,
+              0 0 0 100px #e96cfb inset;
+}
+
+.header .header_icon li a span:befor {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: -5px;
+  margin-left: -5px;
+  border-top: 5px solid #3192bf;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+/* mediaquery */
+@media (max-width:1220px) {
+  .container {width: 100%;}
+  .row {padding: 0 15px;}
+}
