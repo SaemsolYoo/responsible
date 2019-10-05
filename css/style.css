@@ -10,6 +10,7 @@
 /* 레이아웃 */
 #header {background: #f4f4f4; /* url(../img/header_bg2.jpg) repeat-x center top; */}
 #nav {background: #f4f4f4;}
+#title {background: #f3fd53;}
 
 /* 컨테이너 (가운데영역) */
 .container {width: 1200px; margin: 0 auto; /* background: rgba(0,0,0,0.3) */}
@@ -123,18 +124,58 @@ display: inline-block;}
   transition: all .2s ease-out;
   position: absolute; bottom: 0; left: 0;
 }
-.nav > div ol li:hover a:after {
-  width: 100%;
+.nav > div ol li:hover a:after {width: 100%;}
+
+/* 타이틀 hello, my world! */
+.title {position: relative; text-align: center;}
+.title h2 {font-size: 39px; font-weight: bold; text-align: center; padding: 5px 0; }
+.title a {}
+.title .btn {
+  position: absolute; right: 0; top: 5px;
+  width: 60px; height: 60px;
+  background: #80fa6b; color: #e96cfb;
+  font-size: 35px; border-radius: 50%; line-height: 60px;
+  transition: all 0.3s ease;
+}
+.title .btn:hover {
+  box-shadow:
+    0 0 0 4px #e96cfb inset,
+    0 0 0 100px rgba(0,0,0,0.1) inset;
 }
 
 
-
-
-
-
-
 /* mediaquery */
+/* 화면 너비 0 ~ 1220px 기본모니터 더큰거*/
 @media (max-width:1220px) {
   .container {width: 100%;}
   .row {padding: 0 15px;}
+  .title .btn {margin-right: 20px;}
+}
+
+/* 화면 너비 0 ~ 1024px 모니터 */
+@media (max-width:1024px) {
+
+}
+/* 화면 너비 0 ~ 960px 타블렛 */
+@media (max-width:960px) {
+
+}
+/* 화면 너비 0 ~ 768px 타블렛 */
+@media (max-width:768px) {
+
+}
+
+/* 화면 너비 0 ~ 600px 모바일 */
+@media (max-width:600px) {
+
+}
+
+/* 화면 너비 0 ~ 480px 모바일 */
+@media (max-width:480px) {
+
+}
+
+/* 화면 너비 0 ~ 320px 정말 옛날핸드폰*/
+@media (max-width:320px) {
+
 }
