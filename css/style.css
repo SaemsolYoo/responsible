@@ -99,14 +99,14 @@ transition: box-shadow 0.25s ease-in-out;}
               0 0 0 100px #e96cfb inset;
 }
 
-.header .header_icon li a span:befor {
+.header .header_icon li a span::before { /*
   content: '';
   position: absolute;
   left: 50%; bottom: -5px;
   margin-left: -5px;
-  border-top: 5px solid #3192bf;
+  border-top: 5px solid #f3fd53;
   border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
+  border-right: 5px solid transparent; */
 }
 
 /* 전체 메뉴 */
