@@ -156,6 +156,13 @@ display: inline-block;}
 
 /* 컨텐츠 영역 */
 .column {padding: 15px; border-bottom: 1px solid #dbdbdb;}
+.column .col_tit {font-size: 20px; color: #e96cfb; padding-bottom: 5px;}
+.column .col_desc {
+  border-bottom: 1px dashed #dbdbdb;
+  padding-bottom: 15px; margin-bottom: 15px;
+  color: #878787; line-height: 18px;
+  }
+
 .column.col1 {}
 .column.col2 {}
 .column.col3 {border-bottom: 0;}
@@ -165,6 +172,27 @@ display: inline-block;}
 .column.col7 {}
 .column.col8 {}
 .column.col9 {border-bottom: 0;}
+
+/* 메뉴 */
+.menu {}
+.menu li {position: relative;}
+.menu li a {
+  font-size: 16px; text-transform: uppercase;
+  color: #878787;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 10px; display: block;
+  transition: box-shadow 0.34s ease, background 0.34s ease;
+  }
+.menu li a i {
+  position: absolute; right: 10px; top: 15px;} /*포지션 기준점은 위에 .menu li 만약에 그냥 .menu에 주면 한곳으로 뭉치게된다. */
+
+.menu li a:hover {
+  box-shadow: inset 180px 0 0 0 #80fa6b;
+  color: #e96cfb;
+  background: #f3fd53;
+}
+
+
 
 
 /* mediaquery */
@@ -205,6 +233,9 @@ display: inline-block;}
   .header {height: auto;}
   .header_tit {display: none;}
   .header .header_icon {display: none;}
+
+  .column .col_tit {color:red;}
+
 }
 
 /* 화면 너비 0 ~ 480px 모바일 */
