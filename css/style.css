@@ -226,16 +226,28 @@ display: inline-block;}
 }
 
 /* 화면 너비 0 ~ 600px 모바일 */
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .nav > div ol li {width: 50%;}
   .nav > div:last-child ol li {width: 50%;}
 
   .header {height: auto;}
   .header_tit {display: none;}
   .header .header_icon {display: none;}
+  .title .btn {display: none;}
 
-  .column .col_tit {color:red;}
+  .column.col1 .col_tit {display: none;}
+  .column.col1 .col_desc {display: none;}
+  .column.col1 .menu li i {display: none;}
+  .column.col1 {padding: 0; border-bottom: 0;}
+  .column.col1 .menu ul {overflow: hidden;}
+  .column.col1 .menu li {float: left; width: 33.3333%; text-align: center;
+    border-right: 1px solid #dbdbdb; box-sizing: border-box;} /*보더두께를 위드에 포함시키려고 박스사이징 보더박스한거다.*/
+    .column.col1 .menu li:nth-child(3n) {border-right: 0;}
+  .column.col1 .menu li a {color: #111; text-shadow: 0 0 5px rgba(0,0,0,0.2);}
+  .column.col1 .menu li a:hover {box-shadow: none; background: rgba(36,130,174,0.3);}
 
+  .column.col2 {background: #fff;}
+  .column.col4 {border-top: 1px solid #dbdbdb;}
 }
 
 /* 화면 너비 0 ~ 480px 모바일 */
